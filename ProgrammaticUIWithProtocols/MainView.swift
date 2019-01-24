@@ -33,7 +33,7 @@ class MainView: UIView {
     }()
     
     @objc func sendPressed() {
-        print("button pressed")
+        userTextField.resignFirstResponder()
         guard let textField = userTextField.text else { return }
         delegate?.sendMessage(message: textField)
     }
